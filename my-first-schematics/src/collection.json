@@ -3,7 +3,9 @@
   "schematics": {
     "my-first-schematics": {
       "description": "A blank schematic.",
-      "factory": "./my-first-schematics/index#myFirstSchematics"
+      "aliases": ["mfs"],
+      "factory": "./my-first-schematics/index#myFirstSchematics",
+      "schema": "./my-first-schematics/schema.json"
     }
   }
 }

@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "my-first-schematics",
+  "title": "my-first-schematics Options Schema",
+  "type": "object",
+  "description": "my-first-schematics.",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the schematics.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt":"Please enter the name"
+    },
+    "sex": {
+      "type": "boolean",
+      "description": "The sex of the schematics.",
+      "default": false,
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt":"Are you boy??"
+    },
+    "food": {
+      "type": "string",
+      "description": "The hobby of the schematics.",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      },
+      "x-prompt":{
+        "message": "Please choose the food",
+        "type": "list",
+        "items": [
+          { "value": "apple",  "label": "apple" },
+          { "value": "peach", "label": "peach" },
+          { "value": "milk", "label": "milk" },
+          { "value": "watermelon", "label": "watermelon" }
+        ]
+      }
+    },
+    "path": {
+      "type": "string",
+      "description": "The path of the schematics.",
+      "$default": {
+        "$source": "argv",
+        "index": 3
+      },
+      "x-prompt":"Please enter the path"
+    }
+  },
+  "required": [
+    "name",
+    "sex",
+    "food"
+  ]
+}

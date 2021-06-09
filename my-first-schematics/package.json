@@ -4,7 +4,7 @@
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "gen:schema": "dtsgen src/my-first-schematics/schema.json -o src/my-first-schematics/schema.d.ts"
   },
   "keywords": [
     "schematics"
@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular-devkit/core": "^12.0.3",
     "@angular-devkit/schematics": "^12.0.3",
+    "@schematics/angular": "^12.0.3",
     "typescript": "~4.1.2"
   },
   "devDependencies": {
